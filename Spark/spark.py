@@ -12,7 +12,6 @@ df = df.union(spark.read.csv('H_lvr_land_A.csv', header=True, inferSchema=True))
 df = df.filter(df['主要用途'].contains('住家用')).filter(df['建物型態'].contains('住宅大樓')).filter(~df['總樓層數'].isin(['一層','二層','三層','四層','五層','六層','七層','八層','九層','十層','十一層','十二層']))
 df = df.sort(desc('交易年月日'))
 
-
 # def digital_conversion(n): 將中文轉換數字
 #     number_chinese = {
 #         '一': 1,
