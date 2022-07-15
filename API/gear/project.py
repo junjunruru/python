@@ -36,7 +36,7 @@ def digital_conversion(number): #將輸入數字轉為中文
         else :
             return '十' + chinese_number[int(number[1])]
 
-class python_test(MethodResource):
+class python_test(MethodResource): #sql查詢
     @doc(description='Update User info.', tags=['政府實登']) # 文檔描述
     @use_kwargs(project_swagger.test , location='query')
     def get(self , **kwargs):
