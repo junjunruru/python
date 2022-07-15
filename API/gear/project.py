@@ -99,7 +99,7 @@ class python_test(MethodResource): #sql查詢
                 else:
                     sql = sql + " AND " + s_list[i]
 
-        sql = sql + "limit 50 ;"
+        sql = sql + "limit 50 ;" # 只查詢前50筆
         # print('--------------------------------------------')
         # print(sql)
         # print('--------------------------------------------')
