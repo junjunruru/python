@@ -28,13 +28,27 @@ for i in city:
 
 # 建立json檔案
 json_data = ['result-part1.json' , 'result-part2.json']
+
+for i in json_data:
+    with open(random.choice(json_data), 'a',encoding='utf-8') as f:
+        f.write('[')
+
 for i in city:
     with open(random.choice(json_data), 'a',encoding='utf-8') as f:
         f.write(city[i])
-        # f.write(',')
+        f.write(',')
         f.write('\n')
+# 移除最後一個逗號
+for i in json_data:
+    with open(i, 'r',encoding='utf-8') as f:
+        data = f.read()
+    with open(i, 'w',encoding='utf-8') as f:
+        f.write(data[:-1])
+    f.close()
 
-
+for i in json_data:
+    with open(random.choice(json_data), 'a',encoding='utf-8') as f:
+        f.write(']')
 
 
 
