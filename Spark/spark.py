@@ -31,7 +31,7 @@ json_data = ['result-part1.json' , 'result-part2.json']
 for i in city:
     with open(random.choice(json_data), 'a',encoding='utf-8') as f:
         f.write(city[i])
-        f.write('\n')
+        f.write(',')
 
 
 
