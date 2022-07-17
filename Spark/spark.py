@@ -30,7 +30,7 @@ for i in city:
 json_data = ['result-part1.json' , 'result-part2.json']
 
 for i in json_data:
-    with open(random.choice(json_data), 'a',encoding='utf-8') as f:
+    with open(i, 'w',encoding='utf-8') as f:
         f.write('[')
 
 for i in city:
@@ -43,11 +43,11 @@ for i in json_data:
     with open(i, 'r',encoding='utf-8') as f:
         data = f.read()
     with open(i, 'w',encoding='utf-8') as f:
-        f.write(data[:-1])
+        f.write(data[:-2])
     f.close()
 
 for i in json_data:
-    with open(random.choice(json_data), 'a',encoding='utf-8') as f:
+    with open(i, 'a',encoding='utf-8') as f:
         f.write(']')
 
 
