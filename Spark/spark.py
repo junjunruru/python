@@ -15,7 +15,7 @@ df = df.filter(df['主要用途'].contains('住家用')).filter(df['建物型態
 df = df.sort(desc('交易年月日'))
 
 row = df.collect() # 返回列表
-city = {'臺北市':'{city:"臺北市","time_slots": [','新北市':'{city:"新北市","time_slots": [','桃園市':'{city:"桃園市","time_slots": [','臺中市':'{city:"臺中市","time_slots": [','高雄市':'{city:"高雄市","time_slots": ['}
+city = {'臺北市':'{"city":"臺北市","time_slots": [','新北市':'{"city":"新北市","time_slots": [','桃園市':'{"city":"桃園市","time_slots": [','臺中市':'{"city":"臺中市","time_slots": [','高雄市':'{"city":"高雄市","time_slots": ['}
 def chinese_to_date(x): # 將民國轉換成西元
     return str(int(x)+19110000)[0:4]+'-' + str(int(x)+19110000)[4:6] + '-' + str(int(x)+19110000)[6:8]
 
